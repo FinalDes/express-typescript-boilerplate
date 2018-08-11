@@ -8,6 +8,7 @@ script:
   - yarn
   - yarn tslint
   - yarn build
+  - yarn test
 cache:
   yarn: true
   directories:
