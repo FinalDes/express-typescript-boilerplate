@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "lint": "tslint -c tslint.json 'src/**/*.ts'",
+    "lint": "tslint -p . 'src/**/*.ts'",
     "start": "nodemon --watch",
     "test": "jest"
   },
