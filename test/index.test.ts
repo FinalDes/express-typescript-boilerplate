@@ -1,10 +1,15 @@
 import request = require('supertest');
-import { app } from './../src/index';
+import { server } from './../src/index';
 
 describe('Test the root path', () => {
-    it('It should response the GET method', () => {
-        return request(app).get('/').then( (response: any) => {
+    afterAll(() => {
+        server.close();
+    });
+
+    test('It should response the GET method', (done) => {
+        request(server).get('/').then((response) => {
             expect(response.statusCode).toBe(200);
+            done();
         });
     });
 });
