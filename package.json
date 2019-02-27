@@ -32,9 +32,6 @@
     "verbose": true,
     "testURL": "http://localhost:3000/",
     "preset": "ts-jest",
-    "transform": {
-      ".(ts|tsx)": "ts-jest"
-    },
     "testRegex": "(tests/.*|\\.(test|spec))\\.ts$",
     "moduleFileExtensions": [
       "ts",
