@@ -29,8 +29,9 @@
   },
   "jest": {
     "verbose": true,
+    "testURL": "http://localhost:3000/",
     "transform": {
-      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+      ".(ts|tsx)": "ts-jest"
     },
     "testRegex": "(tests/.*|\\.(test|spec))\\.ts$",
     "moduleFileExtensions": [
