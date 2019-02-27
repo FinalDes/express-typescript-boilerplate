@@ -4,11 +4,11 @@ FROM node:11.10.0-slim as BUILD
 WORKDIR /app/
 
 COPY . /app/
-RUN --mount=type=cache,id=yarn,target=/usr/local/share/.cache/yarn/v4 yarn install
+RUN yarn install
 RUN yarn tsc
 RUN cp package.json dist/package.json
 WORKDIR /app/dist/
-RUN --mount=type=cache,id=yarn,target=/usr/local/share/.cache/yarn/v4 yarn install --prod
+RUN yarn install --prod
 
 FROM node:11.10.0-slim as PROD
 WORKDIR /app
